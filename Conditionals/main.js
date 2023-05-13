@@ -186,7 +186,7 @@ if (userNumber) {
 } 
 
 // Nivel 2====================================================
-/*//1
+/*1
 let alumnNote = parseInt(prompt('Nota numérica del alumno'));
 
 if (100 > alumnNote && alumnNote > 80) {
@@ -223,11 +223,11 @@ let verano = 'Junio, Julio, Agosto';
 let userMonth =toLowerCase(prompt('Pon el mes en el que estamos')) ;
 
 
- */
+
 
 //NIVEL 3======================================
 /* lo hace con switch 
 agrupa los meses con el msmo numero de días
 al final del todo ya hace un console log para que me muestre el resultado.
 leap year año bisitesto
-buscar como poner año bisiesto en js
+buscar como poner año bisiesto en js*/

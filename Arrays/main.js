@@ -1,0 +1,319 @@
+/*
+// Arrays
+    //array vacio
+    let arr = [];
+    console.log(arr);
+
+    //array con valores
+    let fruitsAndNumbers = ["banana", 5, "pear", "apple", 6, "lemon"];
+    console.log(fruitsAndNumbers.length);
+
+    //generar array con split
+    let numg = "gamma";
+    console.log(numg.split(""));
+
+//acceder a los elementos del array
+let fruits = ["banana", "pear", "apple", "lemon"];
+console.log(fruits[0]);
+
+let lastPosition = fruits.length-1; //3
+console.log(fruits[lastPosition]);
+
+//modificar elementos de un array
+let numbers = [1,2,3,4,5];
+numbers[0] = 10;
+console.log(numbers);
+
+
+const countries = [
+    "Albania",
+    "Bolivia",
+    "Canada",
+    "Denmark",
+    "Ethiopia",
+    "Finland",
+    "Germany",
+    "Hungary",
+    "Ireland",
+    "Japan",
+    "Kenya",
+  ];
+countries[3] ="Spain";
+console.log(countries);
+
+//métodos para manipular los arrays
+
+  //constructor de arrays
+  const arrayz = Array(8);
+  console.log(arrayz);
+
+  //creando valores estáticos
+  console.log(arrayz.fill("x"));
+  
+  const fillUp = Array(4).fill("Pedro");
+  console.log(fillUp);
+
+  //concatenación de arrays
+  let numgg = [44,28,5,6,7];
+  let enterprise = ["gamma", "tech"];
+
+  let concatArrays = numgg.concat(enterprise);
+  console.log(concatArrays);
+
+  //obtener la longitud de un array
+
+  let lengthConcat = concatArrays.length;
+  console.log(lengthConcat);
+
+  //obtener el index de un elemento de un array
+  console.log(concatArrays.indexOf(6));
+
+    //ejemplo de usos
+    let index = fruits.indexOf("pear"); //0
+    if (index === -1) {
+        console.log("No lo encuentro");
+    } else {
+        console.log("Si está en el array");
+    }i
+
+    //obtener el último index de un elemento en un array
+    let supernumbers = [1,2,3,1,5,4,1,4];
+    console.log(`supernumbers= ${supernumbers}`);
+    let showlastindex = supernumbers.lastIndexOf(1);
+    console.log(showlastindex);
+
+    //verificar si un elemento existe en un array
+    console.log(supernumbers.includes(3));
+
+    //comprobar un array
+    console.log(Array.isArray(supernumbers));
+
+    //convertir un array a string
+    let convertToStr = supernumbers.toString();
+    console.log(convertToStr);
+
+    //unir los elementos de un array
+    console.log(supernumbers.join(""));
+
+    // cortar/copiar elementos de un array
+
+    //slice
+    let copyArr = supernumbers.slice(3,supernumbers.length);
+    console.log(copyArr);
+
+    //splice(posición inicial, 
+        // número de elementos a eliminar y 
+        // cantidad de elementos que se agregarán)
+            supernumbers.splice(2,1);
+            console.log(supernumbers);
+
+            const fruitsss = ["Banana", "Orange", "Apple", "Mango"];
+            // At position 2, add 2 elements: 
+            fruitsss.splice(2, 2, "Lemon", "Kiwi");
+            console.log(fruitsss);
+
+            let months = ["January", "February", "Monday", "Tuesday"];
+            let days = months.splice(2);
+            console.log(days); // ["Monday", "Tuesday"]
+            console.log(months);
+
+    //añadir elementos a un array
+    const arry = ["item1", "item2", "item3"];
+    arry.push("new item"); //añade el elemento al final
+    console.log(arry);
+
+    //eliminar último elemento
+    arry.pop();
+    console.log(arry);
+
+    //eliminar un elemento al comienzo
+    arry.shift();
+    console.log(arry);
+
+    //añadir un elmento al inicio
+    arry.unshift("item0");
+    console.log(arry);
+
+    //invertir orden del array
+    arry.reverse();
+    console.log(arry);
+
+    //ordenar elementos en un array
+    arry.sort();
+    console.log(arry);
+
+
+    const webTechs = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+      ];
+      console.log(webTechs);
+
+      webTechs.sort().reverse();
+      console.log(webTechs);
+
+//Array de arrays
+
+let arrayOfArray = [
+    [1,2,3],
+    [4,5,6]
+];
+*/
+
+const countries = [
+    "Albania",
+    "Bolivia",
+    "Canada",
+    "Denmark",
+    "Ethiopia",
+    "Finland",
+    "Germany",
+    "Hungary",
+    "Ireland",
+    "Japan",
+    "Kenya",
+];
+
+const webTechs = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+];
+
+//1
+let emptyArray = [];
+
+//2
+let fruits = [
+    'lechuga',
+    'tomate',
+    'sandía',
+    'melón',
+    'mango',
+    'manzana',
+    'aguacate',
+];
+//3
+let fruitsLength = fruits.length;
+console.log(fruitsLength);
+
+//4
+//4.1
+let firstArray = fruits[0];
+console.log(firstArray);
+//4.2
+let meanPosition = Math.ceil(fruitsLength / 2);
+console.log(fruits[meanPosition]);
+
+//4.3
+let lastFruitPosition = fruitsLength - 1;
+
+console.log(fruits[lastFruitPosition]);
+
+//5
+let mixedDataTypes = [
+    54,
+    'sandía',
+    'melón',
+    33,
+    43,
+    'aguacate',
+];
+console.log(mixedDataTypes.length);
+
+//6
+let itCompanies = [
+    'Facebook',
+    'Google',
+    'Microsoft',
+    'Apple',
+    'IBM',
+    'Oracle',
+    'Amazon',
+];
+
+//7
+console.log(itCompanies);
+
+//8
+let numberCompanies = itCompanies.length;
+console.log(numberCompanies);
+
+//9
+let firstCompany = itCompanies[0];
+let middleCompany = itCompanies[Math.ceil(numberCompanies / 2)];
+let lastCompany = itCompanies[numberCompanies - 1];
+
+console.log(firstCompany);
+console.log(middleCompany);
+console.log(lastCompany);
+
+//10
+console.log(itCompanies);
+
+//11
+
+//12
+console.log(`${itCompanies[0]},${itCompanies[1]},${itCompanies[2]},${itCompanies[3]},${itCompanies[4]},${itCompanies[5]} y ${itCompanies[6]}, son grandes empresas de TI.`);
+
+//13
+let indexCompany = itCompanies[itCompanies.indexOf('Amazon')];
+if (indexCompany == -1) {
+    console.log(`No existe.`);
+} else {
+    console.log(`${indexCompany} sí está en la lista.`);
+}
+
+//14
+let checkLetter = itCompanies.filter(itCompanies => `o`)
+console.log(checkLetter);
+
+//15
+let itCompaniesSort = itCompanies.sort();
+console.log(itCompaniesSort);
+
+//16
+let itCompaniesReverse = itCompanies.reverse();
+console.log(itCompaniesReverse);
+
+//17
+let itCompanies3FirstCompanies = itCompanies.slice(0,3);
+console.log(itCompanies3FirstCompanies);
+
+//18
+let = itCompanies3LastCompanies = itCompanies.slice(4,7);
+console.log(itCompanies3LastCompanies);
+
+//19
+let itCompaniesMiddle = itCompanies.slice(1,6);
+console.log(itCompaniesMiddle);
+
+//20
+let itCompaniesWithoutFirst = itCompanies.shift();
+
+console.log(itCompaniesWithoutFirst);
+
+//21
+let itCompaniesWithoutMiddleCompanies = itCompanies.splice(3,5);
+console.log(itCompaniesWithoutMiddleCompanies);
+
+
+//22
+let itCompaniesWithoutlatest = itCompanies.pop();
+console.log(itCompaniesWithoutlatest);
+
+//23
+
+let itCompaniesEmpty = itCompanies.slice(-1,7);
+console.log(itCompaniesEmpty);
+
+
