@@ -286,15 +286,15 @@ let itCompaniesReverse = itCompanies.reverse();
 console.log(itCompaniesReverse);
 
 //17
-let itCompanies3FirstCompanies = itCompanies.slice(0,3);
+let itCompanies3FirstCompanies = itCompanies.slice(0, 3);
 console.log(itCompanies3FirstCompanies);
 
 //18
-let = itCompanies3LastCompanies = itCompanies.slice(4,7);
+let = itCompanies3LastCompanies = itCompanies.slice(4, 7);
 console.log(itCompanies3LastCompanies);
 
 //19
-let itCompaniesMiddle = itCompanies.slice(1,6);
+let itCompaniesMiddle = itCompanies.slice(1, 6);
 console.log(itCompaniesMiddle);
 
 //20
@@ -303,7 +303,7 @@ let itCompaniesWithoutFirst = itCompanies.shift();
 console.log(itCompaniesWithoutFirst);
 
 //21
-let itCompaniesWithoutMiddleCompanies = itCompanies.splice(3,5);
+let itCompaniesWithoutMiddleCompanies = itCompanies.splice(3, 5);
 console.log(itCompaniesWithoutMiddleCompanies);
 
 
@@ -313,7 +313,62 @@ console.log(itCompaniesWithoutlatest);
 
 //23
 
-let itCompaniesEmpty = itCompanies.slice(-1,7);
+let itCompaniesEmpty = itCompanies.slice(-1, 7);
 console.log(itCompaniesEmpty);
 
 
+//Level 2 ===============================================================
+
+//1 OK
+
+//2
+let text =
+
+    "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+
+//2.1
+
+//FALTA QUITAR COMAS Y PUNTOS=======================================================
+let newText = text.split(" ");
+console.log(newText);
+let newTextLength = newText.length;
+console.log(newTextLength);
+
+//1 LISTA COMPRA
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+
+shoppingCart.unshift("Meat");
+console.log(shoppingCart);
+
+shoppingCart.push("Sugar");
+console.log(shoppingCart);
+
+let shoppingCartWithoutHoney = shoppingCart.splice(0, 4);
+console.log(shoppingCartWithoutHoney);
+
+let teaModification = "Green Tea";
+shoppingCart[3] = teaModification;
+
+console.log(shoppingCart);
+
+
+//Level 3 =================================================
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+sortAges = ages.sort();
+
+console.log(sortAges);
+
+minAges = sortAges[0];
+
+console.log(minAges);
+
+
+maxAge = sortAges[9];
+console.log(maxAge);
+
+let numberOfAges = ages.length;
+console.log(numberOfAges);
+
+console.log(ages.reduce());
