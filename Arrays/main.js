@@ -362,13 +362,35 @@ console.log(sortAges);
 
 minAges = sortAges[0];
 
-console.log(minAges);
+console.log(minAges); //min
 
 
 maxAge = sortAges[9];
-console.log(maxAge);
+console.log(maxAge);//max
 
 let numberOfAges = ages.length;
-console.log(numberOfAges);
+console.log(numberOfAges); //nº de nº
 
-console.log(ages.reduce());
+let sumAges = 0;
+
+for (let i = 0; i < ages.length; i++) {
+    sumAges += ages[i];
+}//suma total
+console.log(sumAges);
+
+let middleAges = sumAges / numberOfAges;
+console.log(middleAges);//media
+
+
+let medianItem = numberOfAges / 2;
+
+let medianAge = ages[medianItem];
+console.log(medianAge);//mediana
+
+
+
+let ageCategory = maxAge - minAges;
+
+console.log(ageCategory);//Rango de las edades 
+
+
