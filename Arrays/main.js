@@ -208,8 +208,8 @@ console.log(fruitsLength);
 
 //4
 //4.1
-let firstArray = fruits[0];
-console.log(firstArray);
+let firstelement = fruits[0];
+console.log(firstelement);
 //4.2
 let meanPosition = Math.ceil(fruitsLength / 2);
 console.log(fruits[meanPosition]);
@@ -259,22 +259,30 @@ console.log(lastCompany);
 
 //10
 console.log(itCompanies);
-
+//OJO --->
+console.log(itCompanies.join(", "));
 //11
-
+console.log(itCompanies[0].toUpperCase());
+console.log(itCompanies[1].toUpperCase());
+console.log(itCompanies[2].toUpperCase());
+console.log(itCompanies[3].toUpperCase());
+console.log(itCompanies[4].toUpperCase());
 //12
 console.log(`${itCompanies[0]},${itCompanies[1]},${itCompanies[2]},${itCompanies[3]},${itCompanies[4]},${itCompanies[5]} y ${itCompanies[6]}, son grandes empresas de TI.`);
+//Esta forma es más elegante -->
+console.log(`${itCompanies.join(", ").slice(0, -1)} y ${itCompanies[itCompanies.length - 1]} son grandes empresas del TI`);
 
 //13
-let indexCompany = itCompanies[itCompanies.indexOf('Amazon')];
-if (indexCompany == -1) {
+let IncludesCompany = itCompanies.includes('Amazon');
+if (IncludesCompany == false) {
     console.log(`No existe.`);
 } else {
-    console.log(`${indexCompany} sí está en la lista.`);
+    console.log(`${IncludesCompany} sí está en la lista.`);
 }
 
 //14
-let checkLetter = itCompanies.filter(itCompanies => `o`)
+
+let checkLetter = itCompanies.includes('o');
 console.log(checkLetter);
 
 //15
@@ -294,17 +302,17 @@ let = itCompanies3LastCompanies = itCompanies.slice(4, 7);
 console.log(itCompanies3LastCompanies);
 
 //19
-let itCompaniesMiddle = itCompanies.slice(1, 6);
+let itCompaniesMiddle = itCompanies.slice(itCompanies.slice(itCompanies.length / 2), itCompanies.slice(itCompanies.length / 2) + 1);
 console.log(itCompaniesMiddle);
 
 //20
 let itCompaniesWithoutFirst = itCompanies.shift();
 
-console.log(itCompaniesWithoutFirst);
+console.log(itCompanies);
 
 //21
 let itCompaniesWithoutMiddleCompanies = itCompanies.splice(3, 5);
-console.log(itCompaniesWithoutMiddleCompanies);
+console.log(itCompanies);
 
 
 //22
@@ -313,8 +321,8 @@ console.log(itCompaniesWithoutlatest);
 
 //23
 
-let itCompaniesEmpty = itCompanies.slice(-1, 7);
-console.log(itCompaniesEmpty);
+let itCompaniesEmpty = itCompanies.splice(0, itCompanies.length);
+console.log(itCompanies);
 
 
 //Level 2 ===============================================================
@@ -329,10 +337,10 @@ let text =
 //2.1
 
 //FALTA QUITAR COMAS Y PUNTOS=======================================================
-let newText = text.split(" ");
-console.log(newText);
-let newTextLength = newText.length;
-console.log(newTextLength);
+/* let newText = text.split(/[,\s] +| [/.]\ ) */;
+/* console.log(newText); */
+/* let newTextLength = newText.length;
+console.log(newTextLength) */;
 
 //1 LISTA COMPRA
 const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
@@ -343,14 +351,22 @@ console.log(shoppingCart);
 shoppingCart.push("Sugar");
 console.log(shoppingCart);
 
+
+let foundHoney = shoppingCart.includes("Honey");
+
+let positionHoney = shoppingCart.indexOf("Honey");
+shoppingCart.splice(positionHoney, 1);
+
+console.log(shoppingCart);//aqui ya aparece eliminado
+
+
 let shoppingCartWithoutHoney = shoppingCart.splice(0, 4);
 console.log(shoppingCartWithoutHoney);
 
 let teaModification = "Green Tea";
-shoppingCart[3] = teaModification;
-
+positionOfTea = shoppingCart.indexOf("Tea");
+shoppingCart[positionOfTea] = teaModification;
 console.log(shoppingCart);
-
 
 //Level 3 =================================================
 
@@ -368,7 +384,7 @@ console.log(minAges); //min
 maxAge = sortAges[9];
 console.log(maxAge);//max
 
-let numberOfAges = ages.length;
+let numberOfAges = ages.length + 1;
 console.log(numberOfAges); //nº de nº
 
 let sumAges = 0;
@@ -392,5 +408,4 @@ console.log(medianAge);//mediana
 let ageCategory = maxAge - minAges;
 
 console.log(ageCategory);//Rango de las edades 
-
 
