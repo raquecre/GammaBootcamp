@@ -213,30 +213,63 @@ function convertCelsiusToFahrenheit(celsius) {
 //13
 function IMC(kilogrames, meters) {
     let IMC = (kilogrames / (meters * meters));
-    
+
     if (IMC <= 18.5) {
-       return 'Peso Bajo';
+        return 'Peso Bajo';
 
     } else if (IMC > 18.5 && IMC < 24.5) {
         return 'Peso Normal';
 
     } else if (IMC > 25 && IMC < 29.9) {
-         return'Sobrepeso';
+        return 'Sobrepeso';
 
-    }else if (IMC >= 30) {
-         return 'Obeso';
+    } else if (IMC >= 30) {
+        return 'Obeso';
     };
-   
+
 }
-console.log(IMC(200,1.50));
+console.log(IMC(200, 1.50));
 
 
 
 
 //14
+function checkSeason3(month3) {
+let season3;
+    switch (month3) {
+
+        case "diciembre":
+        case "enero":
+        case "febrero":
+            season3 = "Autumn"
+            break;
+
+        case 'marzo':
+        case 'abril':
+        case 'mayo':
+            season3 = "Spring"
+            break;
+
+        case 'junio':
+        case 'julio':
+        case 'agosto':
+            season3 = "Summer"
+            break;
+
+        case 'Septiem':
+        case 'Octubre':
+        case 'noviembre':
+            season3 = "Autumn"
+            break;
+    }
+    return season3;
+}
+checkSeason3(month3)
+
+
 function checkSeason(month) {
     let winter = ['diciembre', 'enero', 'febrero'];
-    let summer = ['junio' ,'julio', 'agosto'];
+    let summer = ['junio', 'julio', 'agosto'];
     let spring = ['marzo', 'abril', 'mayo'];
     let autumm = ['septiembre', 'octubre', 'noviembre'];
     if (winter.includes(month)) {
@@ -246,48 +279,48 @@ function checkSeason(month) {
 
         return 'verano';
 
-    }else if (spring.includes(month)) {
+    } else if (spring.includes(month)) {
 
         return 'primavera';
-        
-    }else if (autumm.includes(month)) {
+
+    } else if (autumm.includes(month)) {
         return 'verano';
     }
 
 }
-console.log (checkSeason('enero'));
- 
+console.log(checkSeason('enero'));
+
 function checkSeason2(season) {
-    
- if (season === 'diciembre' ||season === 'enero' ||season === 'febrero' ) {
-     return`Estamos en Invierno`;
 
- } else if (season ===  'marzo' ||season === 'abril' ||season === 'mayo' ) {
-     return console.log(`Estamos en primavera`);
+    if (season === 'diciembre' || season === 'enero' || season === 'febrero') {
+        return `Estamos en Invierno`;
 
- } else if (season === 'junio'||season === 'julio' ||season === 'agosto') {
-     return console.log(`Estamos en verano`);
+    } else if (season === 'marzo' || season === 'abril' || season === 'mayo') {
+        return console.log(`Estamos en primavera`);
 
- } else if (season === 'octubre'||season === 'noviembre' ||season === 'septiembre'){
-     return console.log(`Estamos en otoño`);
+    } else if (season === 'junio' || season === 'julio' || season === 'agosto') {
+        return console.log(`Estamos en verano`);
 
- }
+    } else if (season === 'octubre' || season === 'noviembre' || season === 'septiembre') {
+        return console.log(`Estamos en otoño`);
+
+    }
 
 }
-console.log(checkSeason2('octubre')); 
+console.log(checkSeason2('octubre'));
 
 
 //15
 
 function findMax(num1, num2, num3) {
-    if (num1 > num2 && num1 > num3){
+    if (num1 > num2 && num1 > num3) {
         return num1;
 
-    }else if(num2 > num1 && num2 > num3 ){
+    } else if (num2 > num1 && num2 > num3) {
         return num2;
 
-    }else if (num3 > num1 && num3 > num2) {
+    } else if (num3 > num1 && num3 > num2) {
         return num3
-        
+
     }
-} console.log(findMax(1,4,3));
+} console.log(findMax(1, 4, 3));

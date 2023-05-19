@@ -144,17 +144,17 @@ do {
 } while (iNeg3 >= 0);
 
 //3
-let n = 1;
+let n = 0;
 for (let index = 0; index < n; index++) {
-    const element = n[index];
+    console.log(i);
 
 }
 
 //4
-/* for (let index = #; index < #rray.length; index++)#{
-    const element = array[index];
-#   
-}  */
+for (let index = 0; index <= 7; index++) {
+    console.log("#".repeat(i));
+    // srt =+"#"
+}
 
 //5
 for (let i = 0; i <= 10; i++) {
@@ -164,49 +164,67 @@ for (let i = 0; i <= 10; i++) {
 //6
 
 for (let i = 0; i <= 10; i++) {
-    console.log([`${i} ${i ** 2} ${i ** 3}`]);
+    console.log([`${i}\t${i ** 2}\t${i ** 3}`]);
 }
 
 //7
-for (let i = 0; i <= 100; i + ) {
-    console.log([i]);
-}
-
-//8
 for (let i = 0; i <= 100; i++) {
-   if (i % 2 != 0) {
-    console.log(i);
-   } 
-}
-//9
- for (let i = 0; i <= 100; i++) {
-    if (i % 2 == 0 && i % 5 == 0 && i % 7 == 0 ) {
+    if (i % 2 == 0) {
         console.log(i);
     }
-} 
+}
+//8
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 != 0) {
+        console.log(i);
+    }
+}
+//9
+///falta
+
+let notPrime = false;
+for (let i = 2; i <= 100; i++) {
+    if (i % i == 0 && i % 1 == 0) {
+        console.log(i);
+    }
+}
 //10
 let result = 0;
- for (let i = 0; i <= 100;  i++ ) {
-    result =+ i;
-    console.log(result);
-}
+for (let i = 0; i <= 100; i++) {
+    result = + i;
 
+}
+console.log(result);
 //11
 let result1 = 0;
 let result2 = 0;
-for (let i = 0; i <= 100; i++) {
-    for (let i = 0; i <= 100; i++) {
-        if (i % 2 == 0) {
-        result1 =+i
-         
-        } 
-     }
-     for (let i = 0; i <= 100; i++) {
-        if (i % 2 != 0) {
-        result2 =+i
-         
-        } 
-     } 
-    console.log(`${result1}es el resultado de la suma de los pares, y ${result2} el resultado de la suma de los impares `);
+for (let i = 0; i <= 100; i++){
+    if (i % 2 == 0) {
+        result1 += i
+
+    } else {
+        result2 += i
+    }
 }
+    console.log(`${result1} es el resultado de la suma de los pares, y ${result2} el resultado de la suma de los impares `);
+
+//12
+    console.log([result1, result2]);
+//13
+let arrayRandomNumbers = []
+for (let i = 0; i < 4; i++) {
+    arrayRandomNumbers.push(Math.floor(Math.random() * 5))
+    
+}
+console.log(arrayRandomNumbers);
+
+//14
+let RandomNumbersNotRepeat = []
+for (let i = 0; i < 4; i++) {
+
+    RandomNumbersNotRepeat.push(Math.floor((Math.random() * 5)))
+    
+}
+
+//como saber si hay algo dentro de un array
 

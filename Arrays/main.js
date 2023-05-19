@@ -85,7 +85,7 @@ console.log(countries);
     //verificar si un elemento existe en un array
     console.log(supernumbers.includes(3));
 
-    //comprobar un array
+    //commbar un array
     console.log(Array.isArray(supernumbers));
 
     //convertir un array a string
