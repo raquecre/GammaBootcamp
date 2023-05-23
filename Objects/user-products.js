@@ -39,6 +39,7 @@ export const users = [
       createdAt: "08/01/2020 10:00 AM",
       isLoggedIn: false,
     },
+    
   ];
   
  export const products = [
@@ -69,5 +70,7 @@ export const users = [
       ratings: [{ userId: "fg12cy", rate: 5 }],
       likes: ["fg12cy"],
     },
+
+
   ];
   

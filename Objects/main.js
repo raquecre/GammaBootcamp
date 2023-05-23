@@ -1,5 +1,5 @@
 import { countries } from "./countries.js";
-
+/*
 //____________ lEVEL 1 __________________________________________________
 //1
 const dog = {};
@@ -105,7 +105,8 @@ Una vez se tiene, en el espacio que se ha reservado para ''guardar''
 
 Cuando ya se tiene seleccionado ello, ya si se puede utilizar los distintos metodos
  para poder encontrar los demas datos que nos interesen.*/
-  
+
+/*
 let max = 0;
 let lotOfSkills;
 
@@ -156,67 +157,143 @@ console.log(Object.keys(copyUsers));
 console.log(Object.values(copyUsers));
 
 //7
-let countriesKeys = Object.keys(countries);
-let countriesNames = "";
-console.log(countries[0].name); //dentro del corchete está el foroffff
 
 for (let country of countries) {
-
     console.log(`${country.name} es un país cuya capital es ${country.capital} y tiene ${country.population} en el que se habla ${country.languages}`);
 }
-console.log(countriesNames);
-
+*/
+/*
 //Level 3 __________________________________________________________
 
 //1
-const personAccount = [
-    {
-        firstName: "Raquel",
-        lastName: "Crespo",
-        expenses: {
-            electricity: 100,
-            waterBill: 100,
-            wifi: 100,
-            rent: 100,
-            car: 100,
-        },
-        incomes: {
-            salary: 2000,
-            transfer: 300,
-        },
+const personAccount = {
+    firstName: "Raquel",
+    lastName: "Crespo",
+    expenses: {
+        electricity: 100,
+        waterBill: 100,
+        wifi: 100,
+        rent: 100,
+        car: 100,
+    },
+    incomes: {
+        salary: 2000,
+        transfer: 300,
+    },
+    totalIncomes: function () {
+        let total = 0;
+        let incomesKeys = Object.keys(personAccount(this.incomes));
+        //Para tener en cuenta todos los que hay y los que puede haber, 
+        //en vez de poner uno a uno mejor poner un bucle para asegurarme de que suma todos
 
-        totalIncomes = personAccount.salary + personAccount.transfer,
-        totalExpense = this.electricity + this.waterBill + this.wifi + this.rent + this.car,
-        accountInfo = this.firstName + this.lastName,
+        for (const income of incomesKeys) {
+            total += personAccount.incomes[income];
+        }
+        return total;
+    },
+    totalExpense: function () {
+        let total = 0;
+        let expensesKeys = Object.keys(personAccount(this.expenses));
+
+        for (const expense of expensesKeys) {
+            total += personAccount.expenses[expense];
+            return total;
+        }
+    },
+    accountBalance: function () {
+        let totBalance = this.totalIncomes() - this.totalExpense();
+        return totBalance;
+
+    },
+
+    accountInfo: function () {
+        console.log(`${this.firstName} ${this.lastName}`);
+    },
+
+    addIncome: function (type, amount) {
+        this.incomes[type] = amount;
+    },
+
+    addExpense: function (type, amount) {
+        this.expenses[type] = amount;
 
     }
 
-]; 
 
+
+// bien planteado pero falta un bucle.
+ //totalIncomes += personAccount.salary + personAccount.transfer,
+//totalExpense += this.electricity + this.waterBill + this.wifi + this.rent + this.car,
+//accountInfo += this.firstName + this.lastName, 
+
+};
+*/
 import { users, products } from "./user-products.js";
-
 //2a
-function signUp(createAccount) {
-let checkUsername;
-for (let user of users) {
-    if (checkUsername == user.username) {
-       console.log(`Ya tienes cuenta en esta página`);
+// 2.
+// signUp
 
-    } else {
-        
-        isUsername = [
-            //aquí hay que crear un username
-                users.username = username,
-                users._id = _id,
-                users.email = email,
-}
+function signUp(username, email, password) {
+
+    //ID___________________
+
+    let _id = function (length = 6) {
+        let _id = Math.random().toString(16).slice(2, 8);
+        return _id
+    };
+    //fecha___________________
+    let createdAt = function () {
+
+        let date = new Date();
+        let day = date.getDay();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+
+        let thisDate = `${day}/${month}/${year} ${hour}:${minutes}`
+        return thisDate
+    };
+    //EN LINEA?___________________
+    let isLoggedIn = true;
+            // reunion de cosas______
     
-        
-        ]
+    // como no tiene nombre hay que hacerlo de manera directa
+    // ya que user es UN ARRAY DE OBJETOS que no tiene un nombre Gal asignado
+
+    
+    let userData = {
+        _id: _id(),
+        username: username,
+        email: email,
+        password: password,
+        createdAt: createdAt(),
+        isLoggedIn: isLoggedIn,
+    };
+
+    for (let user of users) {
+        if (username == users.includes(username)) {
+            return `ya tenías cuenta`
+
+        } else {
+           users.push(userData)
+            return 
+
+        }
     }
-    return isUsername
+
 }
-signUp('Martha');
 
 
 
+console.log(signUp("Raquel", "ra@ra.com", "123456"));
+console.log(signUp("Raquel", "ra@ra.com", "123456"));
+
+/* if (user.email == email) {
+    return "User exist";
+
+} else {
+    let name = prompt(`introduce tu nombre`);
+    let password = prompt(`introduce tu contraseña`);
+
+*/
