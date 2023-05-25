@@ -111,9 +111,13 @@ numberSet.clear();
 console.log(numberSet);
 
 //5
+//Esta forma que viene es la más común para hacerlo, ya que suele darse con un array ya preestablecido.
+const countries3 = ["Finland", "Sweden", "Norway", "blabla", "blublu"];
+let setOfCountries3 = new Set(countries3);
+setOfCountries3.forEach(country => console.log(country));
 
-let arrayNumSt = new Set();
 
+let arrayNumSt = new Set()
 for (let i = 0; i <= 5; i++) {
     arrayNumSt.add(i.toString());
 
@@ -125,6 +129,7 @@ console.log(arrayNumSt);
 const countries = ["Finland", "Sweden", "Norway"];
 
 let countriesSet = new Set(countries);
+
 
 
 //________________________LEVEL 2__________________________________
