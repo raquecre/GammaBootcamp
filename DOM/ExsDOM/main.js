@@ -20,6 +20,7 @@ allsPsSelector.forEach( p => console.log(p));
 //4
 const allPs = document.querySelectorAll('p');
 
+
 allPs[0].textContent = 'Texto ejemplo línea 1';
 allPs[1].textContent = 'Texto ejemplo línea 2';
 allPs[2].textContent = 'Texto ejemplo línea 3';
@@ -38,16 +39,17 @@ allPs[allPs.length-1].textContent ='Fourth Paragraph';
 // LEVEL-------        2          --------------
 
 //1
-allPs.forEach((p,i) => {
+allPs.forEach((p) => {
     p.style.fontFamily = 'Sans-Serif';
     p.style.backgroundColor = 'black';
-    p.style.fontSize = '40px';
+    p.style.fontSize = '400px';
+    p.style.color = 'white';
 })
 
 //2
 
 allPs.forEach((p, i) => {
-  p.style.fontSize = "24px"; // todos los títulos tendrán un tamaño de letra de 24px
+  p.style.fontSize = "240px"; 
   if (i % 2 === 0) {
     p.style.color = "red";
   } else {
@@ -55,4 +57,9 @@ allPs.forEach((p, i) => {
   }
 });
 
+//3
+for (const i of allPs) {
+
+  document.getElementById("id1").id = `${i}-ID`;
+}
 
