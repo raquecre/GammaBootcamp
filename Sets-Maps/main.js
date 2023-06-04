@@ -160,6 +160,59 @@ console.log(E);
 
 //1 ===========   Cuántos idiomas hay en el archivo de objetos de países.
 
+//const countries = ["Finland", "Sweden", "Denmark", "Norway", "IceLand"];
+
+/* const phrase = countries.reduce((acc,cur,i,arr)=> {
+    if(i==arr.length-1){
+        acc += y ${cur} //son países del norte de Europa
+    }
+    else{
+        acc += ${cur}, 
+    }
+        return acc
+    }, "");
+
+console.log(phrase); */
+
+import { countries_data } from "./countries.js";
+
+let totalLanguages = [];
+for (const country of countries_data) {
+    for (const lan of country.languages) {
+        totalLanguages.push(lan);
+    }
+}
+totalLanguages.sort();
+let noRepeatLanguages = new Set(totalLanguages);
+let lan = Array.from(noRepeatLanguages.values());
+
+
+/* for (let i = 0; i < lan.length; i++) {
+    const language = lan[i];
+    let arr = [];
+    if (totalLanguages.indexOf(language)!= -1) {
+        arr.push(totalLanguages.filter( l => l === language));
+    }
+    repeatedLanguages.set(language,arr[0].length);
+    arr = new Array;
+} */
+
+let languageRepetionIndex = new Map();
+for (const uniqueLanguage of noRepeatLanguages) {
+    const repetitions = totalLanguages
+        .filter(language => language == uniqueLanguage)
+        .size();
+    languageRepetionIndex.set(uniqueLanguage, repetitions);
+}
+
+let total = new Map(Array.from(repeatedLanguages));
+let totalRepeatedLanguages = Array.from(total.entries()).sort(function(a, b){return a[1] - b[1]});
+let languages = {};
+for (let i = totalRepeatedLanguages.length-1; i > totalRepeatedLanguages.length-11; i--) {
+    languages[totalRepeatedLanguages[i][0],totalRepeatedLanguages[i][1]];
+}
+console.log(languages);
+
 
 //  Quiero que coja todos los paises que hay en cada valor, los almacene en 
 //  una variable en el caso de que no estuviera ya lo almacene

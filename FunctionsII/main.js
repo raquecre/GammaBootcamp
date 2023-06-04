@@ -1,6 +1,14 @@
 import { countries } from "./countries_data.js";
 
 
+//REDUCE ----------------------
+
+//let value = arr.reduce(function(acumulator, item, index, array){
+
+//},[inicio]);
+
+
+
 
 // Functions
 
@@ -315,8 +323,8 @@ import { countries } from "./countries_data.js";
 //       sum += price;
 //    } 
 // }
-// products
-// .filter((product) => product.price > 3)
+//products
+//.filter((product) => product.price > 3)
 // .map((product) => product.price)
 // .reduce((a, b) => a + b)
 
@@ -381,8 +389,11 @@ numbersSquare.forEach((number) => console.log(number ** 2));
 const modifiedNames = names.map(function (element) {
     return element;
 });
-
 modifiedNames.forEach((name) => console.log(name[0].toUpperCase));
+//10
+
+// products.map( product => p.price)
+
 
 //11
 const countriesContainingLand = countries1.filter((country) =>
@@ -402,52 +413,71 @@ let countriesMinCharacteres = countries1.filter((country) =>
 
 console.log(countriesMinCharacteres);
 
-//14
-let countriesLetterE = countries1.filter((country) =>
-    country.includes("E"));
+// 14
+// let countriesLetterE = countries1.filter((country) =>
+//     country("E"));
 
-console.log(countriesLetterE);
+// console.log(countriesLetterE);
 
 //15
-// let priceNum = products.price.filter((price) =>
-//     price == number);
+let priceNum = products.filter((element) =>
+    typeof element.price == "number");
 
-// console.log(priceNum);
+console.log(priceNum);
 //16
-// let stringList = ["1", "2", "3", "4"];
-// function getStringList(number) {
-//     let list = stringList.map(fuction(number) =>
-//         console.log(number));
+let stringList = ["1", "2", "3", "4"];
+function getStringList(number) {
+    let list = stringList.map( (number) =>
+    console.log(number));
 
-// }
+}
+console.log(getStringList);
+
 
 //17 
+
 let totSum = 0;
-let numberSum = numbers.reduce((number) => 
-totSum += number);
+let numberSum = numbers.reduce((accumulator, current) =>
+    accumulator + current);
 
 console.log(numberSum);
 
+
+
 //18
-let result = "";
-let concatCountries1 = countries1.reduce( (result,country)=> 
-result + country);
+/* let result = "";
+let concatCountries1 = countries1.reduce ((result, country) => {
+country.forEach((country) => {
+    result.push(country);
+})
+return result;
+}
 
 console.log(concatCountries1);
 
+ */
+
+
+/*
+let result = "";
+let concatCountries1 = countries1.reduce((result, country) => {}
+    result + country);
+
+console.log(concatCountries1);
+*/
 
 //19
 
 //20
 
-let namesSome = names.some( (name) =>
-name.length >=7);
+let namesSome = names.some((name) =>
+    name.length > 7);
 
 console.log(namesSome);
 
 //21
-let countriesLand = countries1.some ((country) =>
-country == "Land");
+let countriesLand = countries1.every((country) =>
+    country == "Land");
 
 console.log(countriesLand);
 
@@ -455,14 +485,17 @@ console.log(countriesLand);
 //Buscar un string o buscaar en el indice
 
 //23
-let country6characters = countries1.find((country) =>
-country.length == 6);
+let country6Letters = countries1.find((country) =>
+    country.length == 6);
 
-console.log(countries6characteres);
+console.log(country6Letters);
 
 //24
 
-let country6charactersIndexOf = countries1.indexOf((country) =>
-country.length == 6);
+let country6Position = countries1.indexOf((country) =>
+    country.length === 6);
 
-console.log(countries6characteresIndexOf);
+console.log(country6Position);
+
+//25
+let indexOfNorway = countries1.indexOf

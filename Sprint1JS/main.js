@@ -1,14 +1,14 @@
 //1
 
-let weekdays = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+/* let weekdays = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
 let userDay = parseInt(prompt('Dame un número del 0 al 6'));
 
-console.log(`El día de la semana es el ${weekdays[userDay]}`);
+console.log(`El día de la semana es el ${weekdays[userDay]}`); */
 
 
 //2
-let arrBooleans = ['verdadero', 'falso'];
+/* let arrBooleans = ['verdadero', 'falso'];
 let userNumber = parseInt(prompt('Dame un número del 1 al 9'));
 
 if (userNumber > 0 && userNumber <= 9) {
@@ -16,10 +16,10 @@ if (userNumber > 0 && userNumber <= 9) {
 
 } else {
     console.log(alert(arrBooleans[1]));
-}
+} */
 
 //3 
-
+/* 
 function sumaLista(userArray) {
     let resultSumaLista = 0;
     for (let i = 0; i < userArray.length; i++) {
@@ -29,8 +29,9 @@ function sumaLista(userArray) {
 
 }
 sumaLista([2, 4, 5]);
-
+ */
 //4
+/* 
 function arrExtrValuePos(extrValue) {
     let emphyArrayPositive = [];
     for (let i = 0; i <= extrValue; i++) {
@@ -39,10 +40,10 @@ function arrExtrValuePos(extrValue) {
     }
     return emphyArrayPositive;
 }
-arrExtrValuePos(5);
+arrExtrValuePos(5); */
 
 //5 
-function arrExtrValueNeg(extrValue) {
+/* function arrExtrValueNeg(extrValue) {
     let emphyArrayNegative = [];
     for (let i = 0; i <= extrValue; i--) {
         emphyArrayNegative.push(i);
@@ -52,35 +53,35 @@ function arrExtrValueNeg(extrValue) {
     return emphyArrayNegative;
 }
 arrExtrValueNeg(6);
-
+ */
 
 //6
-function randomLettersNumbers(letter, number) {
+/* function randomLettersNumbers(letter, number) {
     result = letter.repeat(number);
 
     return total;
 }
-randomLettersNumbers('T', 6);
+randomLettersNumbers('T', 6); */
 
 //7
-let numUser1 = parseInt(prompt("Escribe tu primer número:"));
+/* let numUser1 = parseInt(prompt("Escribe tu primer número:"));
 let numUser2 = parseInt(prompt("Escribe tu segundo número:"));
 let numUser3 = parseInt(prompt("Escribe tu tercer número:"));
 let numUser4 = parseInt(prompt("Escribe tu cuarto número:"));
 
 let AverageMath = (numUser1 + numUser2 + numUser3 + numUser4) / 4;
 
-console.log(alert(`La media de los números que has dado es: ${AverageMath}`));
+console.log(alert(`La media de los números que has dado es: ${AverageMath}`)); */
 
 //8
-function century(year) {
+/* function century(year) {
     let century = Math.floor(year / 100) + 1;
 
     return `Ese año pertenece al siglo ${century}`;
 }
-
+ */
 //9
-function myScore(examScore) {
+/* function myScore(examScore) {
     let yourScore;
     if (examScore < 5) {
         yourScore = `Como tu nota es un ${examScore}, estás suspenso.`;
@@ -104,9 +105,9 @@ function myScore(examScore) {
 
     return yourScore;
 }
-
+ */
 //10
-function moneyPay(price, taxRate) {
+/* function moneyPay(price, taxRate) {
 
     if (price >= 100) {
         let discountPrice = (price * 0.9);
@@ -118,10 +119,10 @@ function moneyPay(price, taxRate) {
 
     return totalPay;
 }
-console.log(moneyPay(200, 5));
-
+moneyPay(200, 5));
+ */
 //11
-function multipleOf(number1, number2) {
+/* function multipleOf(number1, number2) {
     let multipleAnswer = number1 % number2;
     if (multipleAnswer == 0) {
         multipleAnswer = `True, porque ${number1} es múltipo de ${number2}.`;
@@ -132,25 +133,32 @@ function multipleOf(number1, number2) {
 
     return multipleAnswer;
 }
-
+ */
 //12 
 function addUserNumber() {
-    let totalSum = 0;
-    let userNumbers = 1;
+    let par = true;
     let result = 0;
-    do {
-        userNumbers = parseInt(prompt('Dame un número'));
-        totalSum += userNumbers;
-    } while (userNumbers != 0)
+    while (par) {
+        let totalSum = 0;
+        let userNumbers = 1;
 
-    if (totalSum % 2 == 0) {
+        do {
+            userNumbers = parseInt(prompt('Dame un número'));
+            totalSum += userNumbers;
+        } while (userNumbers != 0)
 
-        result = console.log(`${totalSum} es par`);
-        addUserNumber();
-    } else {
+        if (totalSum % 2 != 0) {
 
-        result = console.log(`${totalSum} es impar`);
+
+            result = console.log(`${totalSum} es impar`);
+        } else {
+            result = console.log(`${totalSum} es par`);
+            par = false;
+        }
+
     }
+
+
 
     return result;
 }

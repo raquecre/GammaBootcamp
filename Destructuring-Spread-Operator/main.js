@@ -257,9 +257,7 @@ let {
 for (const { name, scores, skills, age } of users) {
     console.log(name, scores, skills, age);
 };
-for (const { name, scores, skills, age } of users) {
-    console.log(name, scores, skills, age);
-};
+//fata esto
 
 
 //2 Encuentra las personas 
@@ -278,12 +276,66 @@ for (const { name, scores, skills, ages } of users) {
 //1Desestructurar el objeto países
 // imprimir nombre, capital, población e idiomas de todos los países
 
-for (const {name, capital, languages, population, flag, curency} of countries_data) {
-  console.log({name, capital, languages, population});  
+for (const { name, capital, languages, population, flag, curency } of countries_data) {
+    console.log({ name, capital, languages, population });
 }
 
 const student = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
 
 //2
-let [ name, skills, jsScore] = student;
-console.log(name, skills, jsScore, reactScore);
+let [name, [,,], scores] = student;
+
+console.log(name, skills, scores);
+
+
+
+//3
+const students = [
+    ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]],
+    ["John", ["HTM", "CSS", "JS", "React"], [85, 80, 85, 80]],
+];
+
+function convertArrayToObject() {
+    let arrOfObject=[];
+    for (const [name, skills, scores] of students) {
+        arrOfObject.push([name, skills, scores]);
+    }
+return arrOfObject;
+}
+
+console.log(convertArrayToObject(student));
+
+
+//4
+const student1 = {
+    name: "David",
+    age: 25,
+    skills: {
+      frontEnd: [
+        { skill: "HTML", level: 10 },
+        { skill: "CSS", level: 8 },
+        { skill: "JS", level: 8 },
+        { skill: "React", level: 9 },
+      ],
+      backEnd: [
+        { skill: "Node", level: 7 },
+        { skill: "GraphQL", level: 8 },
+      ],
+      dataBase: [{ skill: "MongoDB", level: 7.5 }],
+      dataScience: ["Python", "R", "D3.js"],
+    },
+  };
+
+
+// Copie el objeto estudiante a newStudent sin mutar el objeto original. En el nuevo objeto añade lo siguiente 
+const newStudent = {...student1};
+console.log(newStudent);
+
+// Añadir Bootstrap con el nivel 8 a los conjuntos de habilidades de front end
+
+ /*const newStudent2 = {...newStudent, skills:{...frontEnd:,frontEnd{...skill,skill: "Bootstrap", level:8}}}
+
+console.log(newStudent2); */
+// Añadir Express con nivel 9 a los conjuntos de habilidades del back end
+// Añadir SQL con nivel 8 a los conjuntos de habilidades de la base de datos
+// Añadir SQL sin nivel a los conjuntos de habilidades de ciencia de datos
