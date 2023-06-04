@@ -1,0 +1,39 @@
+h1.classStyleH1 {
+    color: green;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+h2.classStyleH2 {
+    text-decoration: underline;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+h3.classStyleH3 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+div#input{
+    text-align: center;
+}
+
+#bar{
+    border-color: green;
+
+}
+
+#button_1{
+    background-color: green;
+    color: white;
+    box-shadow: none;
+}
+
+

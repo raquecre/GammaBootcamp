@@ -1,0 +1,44 @@
+h1 {
+    color: green;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+
+
+h2 {
+    text-decoration: underline;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+
+table {   
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 1pc;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin: 2px;
+    padding: 5px;
+    margin: 2px;
+    padding: 5px;
+ 
+    
+   
+}
