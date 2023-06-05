@@ -5,7 +5,7 @@ elementos HTML para empezar.
 
 El color del año cambia cada 1 segundo
 El color de fondo de la fecha y la hora cambia cada dos segundos
-poner que los colores cambien aleatoriamente con una funcion ya hecha de internet
+poner que los colores cambien aleatoriamente con una funcion
 El reto completado tiene fondo verde
 El desafío en curso tiene fondo amarillo
 Los próximos retos tienen fondo rojo */
@@ -14,31 +14,13 @@ Los próximos retos tienen fondo rojo */
 //----------------El color del año cambia cada 1 segundo----------------
 
 //selecionar el título
-//disminuirle el tamaño de letra 
-
-//Seleccionar el año 
-//aumentar la letrs
-// crear un bucle con los distintos colores 
-//hacer que cada segundo pase al seguiente color
-/*
-var link = document.createElement('link');
-link.setAttribute('rel', 'stylesheet');
-link.setAttribute('type', 'text/css');
-link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Outfit:wght@100&display=swap');
-document.head.appendChild(link);
-*/
+//disminuirle el tamaño de le
 
 
 
 
 
-/* onlyTextDredd.forEach(text => {
-    if (text != dreddOnlyYear) {
-        text.style.fontSize = '25px'
-        
-    }
-    
-}); */
+
 
 
 // ---------------H1  Joseph Dredd desafíos en
@@ -70,21 +52,10 @@ bigYear.style.fontSize = "40px";
 bigYear.style.fontFamily = "courier";
 
 setInterval(() => {
-  bigYear.style.color =generateColor();
+    bigYear.style.color = generateColor();
 }, 1000)
 
-//---------------           2023    chungo      ----------------
-/*
 
-let patternNumbers = /\d+/g;
-const dreddOnlyYear = onlyTextDredd.innerText.match(patternNumbers);
-console.log(dreddOnlyYear);
-
-dreddOnlyYear.toString ();
-
-console.log(dreddOnlyYear);
-
-*/
 
 
 
@@ -93,7 +64,6 @@ console.log(dreddOnlyYear);
 function getDate() {
     let d = new Date();
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
     let monthIndex = d.getMonth();
     let year = d.getFullYear();
     let date = d.getDate();
@@ -113,7 +83,7 @@ dreddDate.textContent = getDate();
 
 //generador de fondo aleatorio
 setInterval(() => {
-   dreddDate.style.backgroundColor = generateColor();
+    dreddDate.style.backgroundColor = generateColor();
 }, 1000)
 
 dreddDate.style.margin = 'auto';
@@ -125,7 +95,6 @@ dreddDate.style.width = '40%';
 
 //---------------------- H2 DETENER NO JS------------------
 const selectH2 = document.querySelector('h2');
-console.log(selectH2);
 
 selectH2.style.fontSize = '12px';
 selectH2.style.textAlign = 'center';
@@ -144,9 +113,6 @@ allsLis.forEach((li) => {
     li.style.fontSize = '16px';
     li.style.fontFamily = 'sans-serif; serif';
     li.style.padding = '6px';
-
-
-    //li.style.textAlign = 'left';
 
     if (li.textContent.endsWith('Done')) {
         li.style.backgroundColor = 'green';

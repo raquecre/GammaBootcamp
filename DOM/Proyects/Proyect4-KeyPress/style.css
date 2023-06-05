@@ -20,9 +20,12 @@ table {
 th {
 
     background-color: #fffdfd86;
-    
-    border: black 5px solid;
+    border: 5px solid;
+    color: black;
 
+}
+p{
+    color: black;
 }
 
 td {

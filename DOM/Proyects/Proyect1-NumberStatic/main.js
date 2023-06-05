@@ -2,20 +2,19 @@
 let isPrime = num => {
     if (num == 1 || num == 0) return false;
     if (num == 2 || num == 3)
-        return true;//solo numeros 0, 1, 2 y 3.
+        return true;
 
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i == 0) return false;//aquí descarta tanto impares como pares
     }
-    return true;//aquí dice numeros primos
+    return true;
 }
 let table = document.querySelector("table");
+
 // START - generate numbers
-
-
-function generateNumbersandTable(numerito) {
+function generateNumbersandTable(numberCreate) {
     inums = 1;
-    while (inums < numerito) {
+    while (inums < numberCreate) {
         // create table row
         let row = document.createElement("tr");
         i = 0;

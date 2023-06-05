@@ -7,7 +7,6 @@ while (icountry < countries.length) {
     let row = document.createElement('tr');
 
     let i = 0;
-
     while (i < 6) {
         let data = document.createElement('td');
         data.textContent = countries[icountry];
@@ -15,10 +14,6 @@ while (icountry < countries.length) {
         icountry++;
         i++;
     }
-
-
-
-
     table.appendChild(row);
 
 }

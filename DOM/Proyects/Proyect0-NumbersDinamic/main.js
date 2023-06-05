@@ -1,11 +1,8 @@
 
-//----------- Selectoress de clase necesarios    ------------------
+//----------- Selectoress de clase     ------------------
 const selectH1 = document.querySelector('h1');
 const selectH2 = document.querySelector('h2');
 const selectH3 = document.querySelector('h3');
-const selectinput = document.querySelector('input');
-const selectButton = document.querySelector('button');
-
 
 // -----Introducir las Ccas que contienen los estilos  -------------
 
@@ -42,7 +39,7 @@ table.style.fontSize = '15px';
 table.style.fontWeight = 'bold';
 table.style.color = 'white';
 
-// ----------- extraer numeros primos---------------------------
+// ----------- numeros primos---------------------------
 
 let isPrime = num => {
   if (num == 1 || num == 0) return false;
@@ -57,7 +54,6 @@ let isPrime = num => {
 
 // ----------- CONTADOR---------------------------
 
-// START - generate numbers
 function generateNumbers(numCount) {
   let nums = 0;
   while (nums < numCount) {
@@ -66,7 +62,7 @@ function generateNumbers(numCount) {
 
     let n = 1;
     let iterationCount = numCount - nums > 6 ? 6 : numCount - nums;
-    // for (let n = 1; n <= 6; n++)
+    
     while (n <= iterationCount) {
 
       // create table data
@@ -95,9 +91,8 @@ function generateNumbers(numCount) {
     table.appendChild(row);
   }
 }
-// END
+// ---------------------
 let msg = document.querySelector('#message');
-
 let inputArea = document.querySelector('input');
 
 inputArea.addEventListener('keypress', key => {

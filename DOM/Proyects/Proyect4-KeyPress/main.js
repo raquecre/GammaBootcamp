@@ -17,12 +17,14 @@ document.addEventListener('keydown', event => {
     selectOutputKeyCode.innerHTML = val;
     let coloredElements = document.getElementsByClassName('randomColor');
 
+    let color = getRandomColor();
     for (const element of coloredElements) {
-        element.style.color = getRandomColor();
+
+        element.style.color = color;
 
     }
-   
 
+    
 
 })
 
